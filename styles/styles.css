@@ -1,0 +1,317 @@
+.header {
+  height: 72px;
+  background-color: #fff;
+  padding-bottom: 1px;
+  box-sizing: border-box;
+}
+
+.header-container {
+  display: flex;
+  border-bottom: 1px solid #e3e4e6;
+  justify-content: space-between;
+  height: 100%;
+  font-size: 0;
+  background-color: #fff;
+}
+
+.header-container:after {
+  top: 71px;
+}
+
+@media (min-width: 640px) {
+  .header-container {
+    height: 100%;
+    font-size: 0;
+    background-color: #fff;
+  }
+
+  .header.is-fixed .header-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 110;
+    height: 72px;
+  }
+}
+
+.header-container.is-basket-active:after {
+  width: calc(100% - 342px);
+}
+
+.header__dc-logo {
+  margin: 16px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.header__dc-logo__sber-vk {
+  margin-left: 26px;
+}
+
+.header__dc-logo>span.scaled {
+  transform: scale(1.2);
+}
+
+@media (min-width: 640px) {
+  .header__dc-logo {
+    margin: 16px 32px;
+    min-width: 128px;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1040px) {
+  .header__dc-logo {
+    margin: 16px;
+    min-width: 40px;
+  }
+}
+
+@media (min-width: 640px) {
+  .header__buttons-container {
+    display: inline-block;
+    vertical-align: top;
+    width: 172px;
+    height: 100%;
+    padding: 0;
+    background-color: #fff;
+    font-size: 0;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1040px) {
+  .header__buttons-container {
+    width: 133px;
+  }
+}
+.header-filters {
+  flex-grow: 1;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+@media (min-width: 640px) {
+  .header-filters {
+    display: flex;
+    position: relative;
+    width: calc(100% - 192px - 172px * 3 - 66px);
+    padding: 0 32px;
+    height: 100%;
+    border-left: 1px solid #e3e4e6;
+    border-right: 1px solid #e3e4e6;
+  }
+}
+
+@media (min-width: 640px) and (min-width: 640px) and (max-width: 1040px) {
+  .header-filters {
+    width: calc(100% - 72px - 72px - 133px * 2 - 66px);
+  }
+}
+
+.header__search-panel {
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+}
+
+@media (min-width: 640px) {
+  .header__search-panel {
+    width: 172px;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    border-right: 1px solid #e3e4e6;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1040px) {
+  .header__search-panel {
+    width: 133px;
+  }
+}
+
+@media (min-width: 640px) {
+  .header__search-panel--active {
+    width: calc(100% - 192px - 172px - 172px - 66px);
+    padding: 0 32px;
+    border-left: 1px solid #e3e4e6;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1040px) {
+  .header__search-panel--active {
+    /* 100% - (left element width) - (right element width) - paddings */
+    width: calc(100% - 72px - 72px - 133px - 66px);
+  }
+}
+
+@media (min-width: 640px) {
+  .header__search-panel--active-no-basket {
+    width: calc(100% - 192px - 172px - 66px);
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1040px) {
+  .header__search-panel--active-no-basket {
+    width: calc(100% - 72px - 133px - 66px);
+  }
+}
+
+.header__search-button {
+  background-color: #f6f6f6;
+  padding: 13px;
+  border: #FFFFFF;
+
+  font-size: 0;
+
+  width: 50px;
+  height: 50px;
+  box-sizing: border-box;
+}
+
+@media (min-width: 640px) {
+  .header__search-button {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    background-color: unset;
+    padding: 0;
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  .header__search-button__icon {
+    margin: -4px 8px 0 0;
+  }
+}
+.address-input__container {
+  position: relative;
+  display: inline-block;
+  max-width: calc(100% - 44px);
+  width: 100%;
+  height: 32px;
+  vertical-align: top;
+  margin-top: calc((72px - 32px) / 2);
+  background-color: #f6f6f6;
+  border-radius: 4px;
+  overflow: hidden;
+  white-space: nowrap;
+  word-wrap: normal;
+  user-select: none; }
+
+@media (min-width: 640px) {
+  .address-input__container {
+    display: flex;
+    max-width: calc(100% - 100px);
+    height: auto;
+    margin-right: 14px;
+    padding: 24px 0;
+    margin-top: 0;
+    background-color: initial;
+    border-radius: initial;
+    overflow: hidden;
+    cursor: pointer;
+    transition: opacity 0.2s ease; } }
+
+.address-input__icon {
+  position: absolute;
+  top: 8px;
+  left: 6px; }
+
+@media (min-width: 640px) {
+  .address-input__icon {
+    top: 23px;
+    left: 0; } }
+
+.address-input:active, .address-input--is-active {
+  background-color: #919399; }
+
+@media (min-width: 640px) {
+  .address-input:active, .address-input--is-active {
+    opacity: 0.7;
+    background-color: initial; } }
+
+.address-input--is-loading {
+  user-select: none;
+  pointer-events: none; }
+
+.address-input--is-loading:before {
+  display: none; }
+
+.address-input--is-loading .address-input__loading {
+  display: inline-block; }
+
+.address-input--only-control {
+  margin-top: 0;
+  background: none;
+  max-width: none;
+  height: auto; }
+
+.address-input--only-control .address-input__location {
+  line-height: normal;
+  margin: 0; }
+
+.address-input--only-control .address-input__location--crop-right {
+  margin-left: 0;
+  padding-right: 0;
+  color: inherit;
+  text-overflow: ellipsis;
+  text-align: left; }
+
+.address-input--only-control .address-input__location--crop-right:after {
+  display: none; }
+
+.address-input--only-control:before {
+  display: none; }
+
+.address-input__loading {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: initial; }
+
+.address-input__location {
+  display: block;
+  box-sizing: border-box;
+  padding: 0 8px 0 0;
+  font-size: 15px;
+  line-height: 32px;
+  color: #2e2e33;
+  margin-left: 26px;
+  overflow: hidden; }
+
+.address-input__location--crop-right {
+  direction: rtl;
+  margin-left: 40px; }
+
+.address-input__location--crop-right:after {
+  position: absolute;
+  left: 26px;
+  content: '...'; }
+
+.address-input:active .address-input__location,
+.address-input.address-input__is-active .address-input__location {
+  color: #fff; }
+
+.address-input.address-input__is-empty .address-input__location {
+  color: #919399 !important; }
+
+@media (min-width: 640px) {
+  .address-input__location {
+    margin-left: 34px;
+    line-height: 24px;
+    direction: unset; }
+  .address-input:active .address-input__location,
+  .address-input.address-input__is-active .address-input__location {
+    color: #2e2e33; } }
+
+.address-input__wrap {
+  overflow: hidden;
+  text-overflow: ellipsis; }
